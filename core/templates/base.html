@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,11 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Enelpa - Engenharia Eletrica Paulista</title>
+    <link rel="stylesheet" href="{% static 'css/enelpa.css' %}">
 </head>
 <body>
-    <div class="logo">logo</div>
-    <div class="menu">menu</div>
-    <div class="titulo">titulo</div>
-    <div class="corpo">corpo</div>
+    <div class="menu">
+        <ul class="icon-nav">
+            <li>
+                <button class="toggle-menu" style="background-color:#254423;">
+                    <span></span>
+                    <span></span>
+                </button>
+            </li>
+        </ul>
+        <div id="menu">
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="">HOME</a>
+                    </li>
+                    <li>
+                        <a href="">SERVIÇOS</a>
+                    </li>
+                    <li>
+                        <a href="">OBRAS</a>
+                    </li>
+                    <li>
+                        <a href="">SOBRE</a>
+                    </li>
+                    <li>
+                        <a href="">FALE CONOSCO</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="corpo">
+        <div class="logo">
+            <img src="{% static 'img/logo Enelpa-BRANCO.png' %}" width="20%" alt="Logo">
+        </div>
+        <div class="titulo">
+            <div class="titulo_inicial">
+                <p style="color: #23420D;">SOBRE</p> 
+            </div>
+            <div class="risco">
+                <hr style="border: #23420D solid 1px;">
+            </div>
+            <div class="titulo_final">
+                <h3 style="color: #23420D;">BEM - VINDO A ENELPA</h3>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>        
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/enelpa.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
 </body>
 </html>
