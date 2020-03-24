@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Enelpa - Engenharia Eletrica Paulista</title>
+    <title>Enelpa - {% block title%}{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'css/enelpa.css' %}">
 </head>
 <body>
@@ -41,22 +41,12 @@
         </div>
     </div>
 
-    <div class="corpo">
+    <div class="conteudo">
         <div class="logo">
-            <img src="{% static 'img/logo Enelpa-BRANCO.png' %}" width="20%" alt="Logo">
+            <img src="{% static 'img/logo Enelpa-BRANCO.png' %}" width="15%" alt="Logo">
         </div>
-        <div class="titulo">
-            <div class="titulo_inicial">
-                <p style="color: #23420D;">SOBRE</p> 
-            </div>
-            <div class="risco">
-                <hr style="border: #23420D solid 1px;">
-            </div>
-            <div class="titulo_final">
-                <h3 style="color: #23420D;">BEM - VINDO A ENELPA</h3>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>        
-            </div>
-        </div>
+        {% block titulo%}{% endblock titulo %}
+        {% block content%}{% endblock content%}
     </div>
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/enelpa.js' %}"></script>
